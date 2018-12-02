@@ -30,3 +30,31 @@ a = a[1:]
 # a = "123" → "12"
 a = a[:-1]
 
+''' 偶数桁，奇数桁'''
+word = "パタトクカシーー"
+
+# 奇数番目の文字を抽出
+extract1 = word[::2]
+print(extract1)
+
+# 偶数番目の文字を抽出
+extract2 = word[1::2]
+print(extract2)
+''' 偶数桁，奇数桁'''
+
+# 文字列変換（translate） leet文字列
+# input : PAIZA → result : P4124
+# input : ALANTURING → result : 4L4NTUR1N6
+table = str.maketrans({
+    'A': '4',
+    'E': '3',
+    'G': '6',
+    'I': '1',
+    'O': '0',
+    'S': '5',
+    'Z': '2',
+})
+input_lines = input()
+result =input_lines.translate(table)
+
+
